@@ -183,7 +183,7 @@ def LatencyTest():
         
         #Command Line Record
         print('FAIL - Connection to the network is too weak\n')
-        exit()
+        #exit()
 
 #performing database  attack dependant on what was chosen from the list and the result of the attack, this function is performed when the database is generated inside the app
 def AutoAttack():
@@ -209,17 +209,17 @@ def AutoAttack():
         if ResultProcess == True:
             
             #GUI popup message box
-            sg.popup("PASS - The Denial of Service attack wasn't Successful")
+            sg.popup("Attack Failed - The Data was protected")
             
             #Command Line Record
-            print("PASS - The Denial of Service attack wasn't Successful\n")
+            print("Attack Failed - The Data was protected\n")
         else:
             
             #GUI popup message box
-            sg.popup("FAIL - The Denial of Service attack was Successful")
+            sg.popup("Attack Successful - The Data has been deleted")
 
             #Command Line Record
-            print("FAIL - The Denial of Service attack was Successful\n")
+            print("Attack Successful - The Data has been deleted\n")
 
     #if weak authentication attack is picked do this action
     elif values['Attacks'] == [WA]:
@@ -246,17 +246,17 @@ def AutoAttack():
         if ResultProcess == True:
             
             #GUI popup message box
-            sg.popup("PASS - The Weak Authentication attack wasn't Successful")
+            sg.popup("Attack Failed - The Weak Authentication attack wasn't Successful")
             
             #Command Line Record
-            print("PASS - The Weak Authentication attack wasn't Successful\n")
+            print("Attack Failed - The Weak Authentication attack wasn't Successful\n")
         else:
             
             #GUI popup message box
-            sg.popup("FAIL - The Weak Authentication attack was Successful")
+            sg.popup("Attack Successful - The Weak Authentication attack was Successful")
             
             #Command Line Record
-            print("FAIL - The Weak Authentication attack was Successful\n")
+            print("Attack Successful - The Weak Authentication attack was Successful\n")
 
     #if SQL Injection attack is picked do this action
     elif values['Attacks'] == [SQLI]:
@@ -287,17 +287,17 @@ def AutoAttack():
         if ResultProcess == True:
             
             #GUI popup message box
-            sg.popup("PASS - The SQL Injection attack wasn't Successful")
+            sg.popup("Attack Failed - The SQL Injection attack wasn't Successful")
             
             #Command Line Record
-            print("PASS - The SQL Injection attack wasn't Successful\n")
+            print("Attack Failed - The SQL Injection attack wasn't Successful\n")
         else:
             
             #GUI popup message box
-            sg.popup("FAIL - The SQL Injection attack was Successful")
+            sg.popup("Attack Successful - The SQL Injection attack was Successful")
             
             #Command Line Record
-            print("FAIL - The SQL Injection attack was Successful\n")
+            print("Attack Successful - The SQL Injection attack was Successful\n")
 
     #If no attack types was selected print/popup message this 
     else:
